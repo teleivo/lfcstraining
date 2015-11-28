@@ -18,10 +18,10 @@ Please refer to https://training.linuxfoundation.org/certification/lfcs for an u
 # Command line
 ## Editing text files on the command line
 ## Manipulating text files from the command line
-* extract all user accounts and their default shells into file 'users-shells'
+1. extract all user accounts and their default shells into file 'users-shells'
   * extract a list of unique shells into file 'shells'
   * get a total of users per shell from 'users-shells', sort from least to most assigned shell and override file 'shells' with the output
-* download page https://en.wikipedia.org/wiki/List_of_Ubuntu_releases into file 'ubuntu-releases-web'
+2. download page https://en.wikipedia.org/wiki/List_of_Ubuntu_releases into file 'ubuntu-releases-web'
   * extract all past & current releases from the table of content into file 'ubuntu-releases'
   * get a total of all releases
 
