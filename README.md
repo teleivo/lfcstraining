@@ -39,6 +39,18 @@ Please refer to https://training.linuxfoundation.org/certification/lfcs for an u
   * recreate '~/etc_backup.tar' and exclude '~/etc_backup/passwd' from it
 
 ## Assembling partitions as LVM devices
+1. create an LVM on host lfc01
+  * ensure packages for LVM are installed
+  * create volume group vg_test containing physical volume /dev/sdb1
+  * rename the volume group vg_test to vg_lfc01
+  * create an lvm lv_lfc01 on vg_lfc01 taking its entire space
+  * create an ext4 filesystem on lv_lfc01, mount it permanently using its UUID
+  * expand disk space on lv_lfc01 by adding /dev/sdc1 to vg_lfc01
+2. create a snapshot of lv_lfc01 to create a backup while the original volume can still be written to
+3. create an LVM specifying the exact physical extents which should be used
+4. create a striped/linear LVM
+
+
 ## Configuring swap partitions
 ## File attributes
 ## Finding files on the filesystem
