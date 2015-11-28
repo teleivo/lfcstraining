@@ -30,7 +30,7 @@ Please refer to https://training.linuxfoundation.org/certification/lfcs for an u
 # Filesystem and storage
 ## Archiving and compressing files and directories
 1. backup '/etc'
-  * create a copy of '/etc' in '~/etc_backup'
+  * create a copy of '/etc' in '~/etc_backup' while preserving mode, ownership, timestamps and symbolic links 
   * create a gziped tarball '~/etc_backup.tar.gz'
   * create a bzip2 tarball '~/etc_backup.tar.bz'
   * change some home directories in '~/etc_backup/passwd' and update '~/etc_backup.tar.gz'
