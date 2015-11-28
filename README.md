@@ -29,6 +29,15 @@ Please refer to https://training.linuxfoundation.org/certification/lfcs for an u
 
 # Filesystem and storage
 ## Archiving and compressing files and directories
+1. backup '/etc'
+  * create a copy of '/etc' in '~/etc_backup'
+  * create a gziped tarball '~/etc_backup.tar.gz'
+  * create a bzip2 tarball '~/etc_backup.tar.bz'
+  * change some home directories in '~/etc_backup/passwd' and update '~/etc_backup.tar.gz'
+  * delete '~/etc_backup/passwd' from '~/etc_backup.tar.gz'
+  * recreate '~/etc_backup.tar.gz' and exclude '~/etc_backup/passwd' from it
+  * list files in '~/etc_backup.tar.gz'
+
 ## Assembling partitions as LVM devices
 ## Configuring swap partitions
 ## File attributes
