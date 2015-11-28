@@ -1,6 +1,6 @@
 # lfcstraining
 
-This is a VM setup to play around with for the lfcs sysadmin exam taken on Ubuntu in 2015. Below you'll find tasks for each of the domains and competencies.
+This is a VM setup to play around with for the lfcs sysadmin exam taken on Ubuntu in 2015. Below you'll find tasks for each of the domains and competencies. Check [ANSWERS](ANSWERS.md) for possible solutions to the given tasks.
 
 This is not an official guide or training program!!
 Please refer to https://training.linuxfoundation.org/certification/lfcs for an up to date list of the domains and competencies as these might change!!!
@@ -21,7 +21,7 @@ Please refer to https://training.linuxfoundation.org/certification/lfcs for an u
 1. user accounts
   * extract all user accounts and their default shells into file 'users-shells'
   * extract a list of unique shells into file 'shells'
-  * get a total of users per shell from 'users-shells', sort from least to most assigned shell and override file 'shells' with the output
+  * get a total of users per shell from 'users-shells', sort from most to least assigned shell and override file 'shells' with the output
 2. ubuntu releases
   * download page https://en.wikipedia.org/wiki/List_of_Ubuntu_releases into file 'ubuntu-releases-web'
   * extract all past & current releases from the table of content into file 'ubuntu-releases'
