@@ -18,6 +18,9 @@ Please refer to https://training.linuxfoundation.org/certification/lfcs for an u
 # Command line
 ## Editing text files on the command line
 ## Manipulating text files from the command line
+* extract all user accounts and their default shells into file 'users-shells'
+  * extract a list of unique shells into file 'shells'
+  * get a total of users per shell from 'users-shells', sort from least to most assigned shell and override file 'shells' with the output
 
 # Filesystem and storage
 ## Archiving and compressing files and directories
