@@ -23,6 +23,15 @@ This shows possible ways to achieve the tasks described in [README](README.md).
 
 # Filesystem and storage
 ## Archiving and compressing files and directories
+1. backup '/etc'
+  * ```sudo cp -a /etc ~/etc_backup```
+  * ```sudo tar czvf etc_backup.tar.gz etc_backup```
+  * ```sudo tar tf etc_backup.tar.gz```
+  * ```sudo tar cjvf etc_backup.tar.bz2 etc_backup```
+  * ```sudo tar cvf etc_backup.tar etc_backup && sudo sed -i 's,/home/vagrant,/home/vagrant/new,' etc_backup/passwd && sudo tar uf etc_backup.tar etc_backup && mkdir ~/tmp && sudo tar xf etc_backup.tar etc_backup/passwd```
+  * ```sudo tar -v --delete --file=etc_backup.tar etc_backup/passwd```
+  * ```sudo tar cf etc_backup.tar etc --exclude=etc_backup/passwd```
+
 ## Assembling partitions as LVM devices
 ## Configuring swap partitions
 ## File attributes
