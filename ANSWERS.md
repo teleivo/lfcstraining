@@ -33,6 +33,14 @@ This shows possible ways to achieve the tasks described in [README](README.md).
   * ```sudo tar cf etc_backup.tar etc --exclude=etc_backup/passwd```
 
 ## Assembling partitions as LVM devices
+1. create an LVM on host lfc01
+  * ```sudo apt-get install lvm2```
+  * create partition on disk sdb ```sudo fdisk /dev/sdb```, ```sudo vgcreate vg_test /dev/sdb```
+  * ```sudo vgrename vg_test vg_lfc01```
+  * ```sudo lvcreate -l 100%FREE -n lv_lfc01 vg_lfc01```
+  * ```sudo mkfs -t ext4 /dev/vg_lfc01/lv_lfc01```, ```sudo blkid```, ```sudo vim /etc/fstab``` add line like ```UUID=lbQfMo-Qdz6-5hNf-NacD-Ejsr-yd1j-CG1oQh /opt ext4 defaults 0 1```, ```sudo mount -a```
+  * ```sudo pvcreate /dev/sdc1 && sudo vgextend vg_lfc01 /dev/sdc1``` UNDONE: allocated PE size of vg still the same, so ```sudo lvextend /dev/vg_lfc01/lv_lfc01 -l 100%FREE``` does not have an effect
+
 ## Configuring swap partitions
 ## File attributes
 ## Finding files on the filesystem
