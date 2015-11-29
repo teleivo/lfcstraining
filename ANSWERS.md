@@ -54,8 +54,13 @@ This shows possible ways to achieve the tasks described in [README](README.md).
   * ```sudo adduser john```, ```sudo su - john```, ```echo -e "#!/bin/bash\necho test\n" > johnscript.sh```, ```chmod a+x,u+s johnscript.sh```
 2. GUID
   * ```sudo addgroup sales && sudo usermod -aG sales john && sudo adduser jane && sudo usermod -aG sales jane```, ```sudo mkdir /opt/sales && sudo chown root.sales /opt/sales && sudo chmod 3770 /opt/sales```
-3.
-
+3. file attributes
+  * ```cd /home/vagrant```, ```mkdir attributes && cd attributes```
+  * ```echo "content" > immutable && sudo chattr =i immutable```
+  * ```echo "first line" > appendonly && sudo chattr =a appendonly```
+  * ```echo "first line" > noatimeupdate && sudo chattr =A noatimeupdate```
+  * ```lsattr```
+  * ```sudo chattr -i immutable && sudo chattr -a appendonly && sudo chattr -A noatimeupdate```
 
 ## Finding files on the filesystem
 ## Formatting filesystems
