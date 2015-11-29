@@ -52,8 +52,9 @@ Please refer to https://training.linuxfoundation.org/certification/lfcs for an u
 4. create an LVM specifying the exact physical extents which should be used
 5. create a striped/linear LVM
 
-
 ## Configuring swap partitions
+1. create swap partition on /dev/sdc1 and auto mount on boot
+
 ## File attributes
 ## Finding files on the filesystem
 ## Formatting filesystems
