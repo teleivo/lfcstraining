@@ -103,7 +103,11 @@ Please refer to https://training.linuxfoundation.org/certification/lfcs for an u
 * mount /dev/sde5 automatically at boot time at /mnt/diske5
 
 ## Mounting networked filesystems
-
+1. create samba share on host lcf01
+  * share directory /opt/share/sales and allow write operations, add samba password for user john
+2. mount samba share on host lfc02
+  * mount /opt/share/sales from host lfc01 at host lfc02 at /mnt/sales
+3. mount nfs filesystem
 
 ## Troubleshooting filesystem issues
 1. tune2fs
