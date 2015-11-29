@@ -50,6 +50,13 @@ This shows possible ways to achieve the tasks described in [README](README.md).
   * ```swapon -s``` or ```cat /proc/swaps```
 
 ## File attributes
+1. SUID
+  * ```sudo adduser john```, ```sudo su - john```, ```echo -e "#!/bin/bash\necho test\n" > johnscript.sh```, ```chmod a+x,u+s johnscript.sh```
+2. GUID
+  * ```sudo addgroup sales && sudo usermod -aG sales john && sudo adduser jane && sudo usermod -aG sales jane```, ```sudo mkdir /opt/sales && sudo chown root.sales /opt/sales && sudo chmod 3770 /opt/sales```
+3.
+
+
 ## Finding files on the filesystem
 ## Formatting filesystems
 ## Mounting filesystems automatically at boot time
