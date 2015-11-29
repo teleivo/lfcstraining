@@ -63,6 +63,9 @@ This shows possible ways to achieve the tasks described in [README](README.md).
   * ```sudo chattr -i immutable && sudo chattr -a appendonly && sudo chattr -A noatimeupdate```
 
 ## Finding files on the filesystem
+1. find
+  * ```sudo find / \( -perm -4000 -fprintf /home/vagrant/setuid.txt '%p \n' \) , \( -size +10M -fprintf /home/vagrant/big.txt '%s %p \n' \)```
+
 ## Formatting filesystems
 ## Mounting filesystems automatically at boot time
 ## Mounting networked filesystems
