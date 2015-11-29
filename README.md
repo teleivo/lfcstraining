@@ -46,9 +46,11 @@ Please refer to https://training.linuxfoundation.org/certification/lfcs for an u
   * create an lvm lv_lfc01 on vg_lfc01 taking its entire space
   * create an ext4 filesystem on lv_lfc01, mount it permanently using its UUID
   * expand disk space on lv_lfc01 by adding /dev/sdc1 to vg_lfc01
-2. create a snapshot of lv_lfc01 to create a backup while the original volume can still be written to
-3. create an LVM specifying the exact physical extents which should be used
-4. create a striped/linear LVM
+2. shrink lvm lv_lfc01
+  * remove pv /dev/sdc1 from vg_lfc01
+3. create a snapshot of lv_lfc01 to create a backup while the original volume can still be written to
+4. create an LVM specifying the exact physical extents which should be used
+5. create a striped/linear LVM
 
 
 ## Configuring swap partitions
