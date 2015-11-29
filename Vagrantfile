@@ -24,8 +24,12 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       vb.name = node1_name
       vb.customize ["createhd",  "--filename", "lfc01_disk0", "--size", "2048"]
       vb.customize ["createhd",  "--filename", "lfc01_disk1", "--size", "2048"]
+      vb.customize ["createhd",  "--filename", "lfc01_disk2", "--size", "2048"]
+      vb.customize ["createhd",  "--filename", "lfc01_disk3", "--size", "2048"]
       vb.customize ["storageattach", :id, "--storagectl", "SATAController", "--port", "1", "--type", "hdd", "--medium", "lfc01_disk0.vdi"]
       vb.customize ["storageattach", :id, "--storagectl", "SATAController", "--port", "2", "--type", "hdd", "--medium", "lfc01_disk1.vdi"]
+      vb.customize ["storageattach", :id, "--storagectl", "SATAController", "--port", "3", "--type", "hdd", "--medium", "lfc01_disk2.vdi"]
+      vb.customize ["storageattach", :id, "--storagectl", "SATAController", "--port", "4", "--type", "hdd", "--medium", "lfc01_disk3.vdi"]
     end
   end
 
