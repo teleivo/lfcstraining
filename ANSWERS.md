@@ -92,13 +92,10 @@ This shows possible ways to achieve the tasks described in [README](README.md).
 
 ## Mounting filesystems automatically at boot time
 1. /etc/fstab
-  * get uuid ```sudo blkid```, add line to /etc/fstab ```UUID=594512ab-6231-471e-97da-e62521478b39 /mnt/diske1 ext3 defaults 0 1```
-  * ```UUID=1418e78b-ab4c-422a-a1e0-d17ffe6e3e4a /mnt/diske5 ext4 defaults 0 1```
+  * ```mkdir /mnt/diske1```, get uuid ```sudo blkid```, add line to /etc/fstab ```UUID=594512ab-6231-471e-97da-e62521478b39 /mnt/diske1 ext3 defaults 0 1```
+  * ```mkdir /mnt/diske5```, add line to /etc/fstab ```UUID=1418e78b-ab4c-422a-a1e0-d17ffe6e3e4a /mnt/diske5 ext4 defaults 0 1```
 
 ## Mounting networked filesystems
-
-
-
 
 
 ## Troubleshooting filesystem issues
