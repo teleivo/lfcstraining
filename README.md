@@ -65,6 +65,7 @@ Please refer to https://training.linuxfoundation.org/certification/lfcs for an u
   * create directory 'attributes' in home directory /home/john of user john
   * create an immutable file 'immutable'
   * create file 'appendonly' which can only be appended to
+  * create file 'noatimeupdate' of which atime will not be updated
   * list the file attributes of above files
   * remove the file attributes of above files
 
