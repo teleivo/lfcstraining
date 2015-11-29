@@ -54,6 +54,7 @@ Please refer to https://training.linuxfoundation.org/certification/lfcs for an u
 
 ## Configuring swap partitions
 1. create swap partition on /dev/sdd and auto mount on boot
+2. list used swap devices
 
 ## File attributes
 ## Finding files on the filesystem
