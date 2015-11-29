@@ -81,6 +81,7 @@ Please refer to https://training.linuxfoundation.org/certification/lfcs for an u
   * find all files owned by user john excluding "/home/john"
   * find all directories containing "log" in their name but ignore case
   * find all character devices
+  * as user john create files "file name01.txt" "file name02.txt" "file name03.txt" in '/home/john/find', run find on the directory for type file and remove then by combining find exec and xargs
 2. locate
   * create a new file and use locate to find it
 
