@@ -98,7 +98,7 @@ Please refer to https://training.linuxfoundation.org/certification/lfcs for an u
   * make an ext4 on /dev/sde5
 
 ## Mounting filesystems automatically at boot time
-1. mount
+1. /etc/fstab
 * mount /dev/sde1 automatically at boot time at /mnt/diske1
 * mount /dev/sde5 automatically at boot time at /mnt/diske5
 
