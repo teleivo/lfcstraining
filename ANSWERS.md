@@ -44,6 +44,11 @@ This shows possible ways to achieve the tasks described in [README](README.md).
   * get current block size ```sudo tune2fs -l /dev/mapper/vg_lfc01-lv_lfc01 | grep -i 'block size'```, shrink filesystem to half of the block size since both pv's are of same size ```sudo umount /opt && sudo resize2fs  /dev/mapper/vg_lfc01-lv_lfc01 523264s && sudo lvreduce -l 511 /dev/vg_lfc01/lv_lfc01 && sudo vgreduce /dev/vg_lfc01 /dev/sdc1 && sudo pvremove /dev/sdc1```
 
 ## Configuring swap partitions
+1. create swap partition on /dev/sdd and auto mount on boot
+  * create partition with swap id ```sudo fdisk /dev/sdd```, ```sudo mkswap /dev/sdd1```, add fstab entry (get uuid by ```blkid```) ```UUID=ca4a7ff4-ff8d-4384-a10d-cf23a8d9f228 swap swap defaults 0 0```, ```sudo swapon -a```
+2. list used swap devices
+  * ```swapon -s``` or ```cat /proc/swaps```
+
 ## File attributes
 ## Finding files on the filesystem
 ## Formatting filesystems
