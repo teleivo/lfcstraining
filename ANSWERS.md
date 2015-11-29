@@ -39,7 +39,7 @@ This shows possible ways to achieve the tasks described in [README](README.md).
   * ```sudo vgrename vg_test vg_lfc01```
   * ```sudo lvcreate -l 100%FREE -n lv_lfc01 vg_lfc01```
   * ```sudo mkfs -t ext4 /dev/vg_lfc01/lv_lfc01```, ```sudo blkid```, ```sudo vim /etc/fstab``` add line like ```UUID=lbQfMo-Qdz6-5hNf-NacD-Ejsr-yd1j-CG1oQh /opt ext4 defaults 0 1```, ```sudo mount -a```
-  * ```sudo pvcreate /dev/sdc1 && sudo vgextend vg_lfc01 /dev/sdc1``` UNDONE: allocated PE size of vg still the same, so ```sudo lvextend /dev/vg_lfc01/lv_lfc01 -l 100%FREE``` does not have an effect
+  * ```sudo pvcreate /dev/sdc1 && sudo vgextend vg_lfc01 /dev/sdc1 && sudo lvextend -l 100%VG /dev/vg_lfc01/lv_lfc01```
 
 ## Configuring swap partitions
 ## File attributes
