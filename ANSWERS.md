@@ -65,6 +65,18 @@ This shows possible ways to achieve the tasks described in [README](README.md).
 ## Finding files on the filesystem
 1. find
   * ```sudo find / \( -perm -4000 -fprintf /home/vagrant/setuid.txt '%p \n' \) , \( -size +10M -fprintf /home/vagrant/big.txt '%s %p \n' \)```
+  * ```sudo find /etc/ -mtime 0 -printf '%t %p \n'```
+  * ```sudo find / -perm 664 -type f```
+  * ```sudo find / -perm /664 -type f```
+  * ```sudo find / -perm -u+w,g+w -type f```
+  * ```which passwd```
+  * ```sudo find / -user john```
+  * ```sudo find / -not -path "/home/john" -user john```
+  * ```sudo find / -iname "log"```
+  * ```sudo find / -type c```
+  * ```su - john```, ```mkdir find & cd find && touch "file name"{01,02,03}.txt```, ```find -type f -print0 | xargs -0 rm```
+2. locate
+  * ```touch file01 sudo updatedb && locate file01```
 
 ## Formatting filesystems
 ## Mounting filesystems automatically at boot time
