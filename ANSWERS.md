@@ -78,10 +78,29 @@ This shows possible ways to achieve the tasks described in [README](README.md).
 2. locate
   * ```touch file01 sudo updatedb && locate file01```
 
-## Formatting filesystems
-## Mounting filesystems automatically at boot time
-## Mounting networked filesystems
 ## Partitioning storage devices
+1. fdisk
+  * ```sudo fdisk -l```
+  * ```sudo fdisk /dev/sde```, commands: n, p, enter, enter, 2097153, enter;
+  * commands: n, e, enter, enter, enter;
+  * commands: n, l, enter, enter, enter; commands: w
+
+## Formatting filesystems
+1.mkfs
+  * ```sudo fdisk -l /dev/sde```, ```sudo mkfs -t ext3 /dev/sde1```
+  * ```sudo mkfs -t ext4 /dev/sde5```
+
+## Mounting filesystems automatically at boot time
+1. /etc/fstab
+  * get uuid ```sudo blkid```, add line to /etc/fstab ```UUID=594512ab-6231-471e-97da-e62521478b39 /mnt/diske1 ext3 defaults 0 1```
+  * ```UUID=1418e78b-ab4c-422a-a1e0-d17ffe6e3e4a /mnt/diske5 ext4 defaults 0 1```
+
+## Mounting networked filesystems
+
+
+
+
+
 ## Troubleshooting filesystem issues
 
 # Local system administration
