@@ -53,7 +53,7 @@ Please refer to https://training.linuxfoundation.org/certification/lfcs for an u
 5. create a striped/linear LVM
 
 ## Configuring swap partitions
-1. create swap partition on /dev/sdc1 and auto mount on boot
+1. create swap partition on /dev/sdd and auto mount on boot
 
 ## File attributes
 ## Finding files on the filesystem
