@@ -70,6 +70,18 @@ Please refer to https://training.linuxfoundation.org/certification/lfcs for an u
   * remove the file attributes of above files
 
 ## Finding files on the filesystem
+1. find
+  * find all files with SUID bit set
+  * find files bigger than 1MB
+  * find files that were modified yesterday
+  * find where program passwd is executed from
+  * find all files owned by user john
+  * find all files owned by user john excluding "/home/john"
+  * find all directories containing "log" in their name but ignore case
+  * find all character devices
+2. locate
+  * create a new file and use locate to find it
+
 ## Formatting filesystems
 ## Mounting filesystems automatically at boot time
 ## Mounting networked filesystems
