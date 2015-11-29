@@ -57,6 +57,17 @@ Please refer to https://training.linuxfoundation.org/certification/lfcs for an u
 2. list used swap devices
 
 ## File attributes
+1. SUID
+  * create an executable which when executed runs with permissions of user john no matter who executes it
+2. GUID, sticky bit
+  * create a directory which is owned by user root and group sales of which user john and jane are members. only root and members of the sales group should have read,write,execute access to this directory. files created in this directory should be readable, writable by the members of the sales group no matter who created the file. files in this directory should only be deletable by its owner or root.
+3. file attributes
+  * create directory 'attributes' in home directory /home/john of user john
+  * create an immutable file 'immutable'
+  * create file 'appendonly' which can only be appended to
+  * list the file attributes of above files
+  * remove the file attributes of above files
+
 ## Finding files on the filesystem
 ## Formatting filesystems
 ## Mounting filesystems automatically at boot time
