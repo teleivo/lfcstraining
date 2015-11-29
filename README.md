@@ -71,8 +71,7 @@ Please refer to https://training.linuxfoundation.org/certification/lfcs for an u
 
 ## Finding files on the filesystem
 1. find
-  * find all files with SUID bit set
-  * find files bigger than 1MB
+  * traverse the filesystem just once, listing setuid files and directories into /root/suid.txt and large files into /root/big.txt
   * find files that were modified yesterday
   * find where program passwd is executed from
   * find all files owned by user john
