@@ -40,6 +40,8 @@ This shows possible ways to achieve the tasks described in [README](README.md).
   * ```sudo lvcreate -l 100%FREE -n lv_lfc01 vg_lfc01```
   * ```sudo mkfs -t ext4 /dev/vg_lfc01/lv_lfc01```, ```sudo blkid```, ```sudo vim /etc/fstab``` add line like ```UUID=lbQfMo-Qdz6-5hNf-NacD-Ejsr-yd1j-CG1oQh /opt ext4 defaults 0 1```, ```sudo mount -a```
   * ```sudo pvcreate /dev/sdc1 && sudo vgextend vg_lfc01 /dev/sdc1 && sudo lvextend -l 100%VG /dev/vg_lfc01/lv_lfc01 && sudo resize2fs /dev/mapper/vg_lfc01-lv_lfc01```
+2. shrink lvm lv_lfc01
+  * get current block size ```sudo tune2fs -l /dev/mapper/vg_lfc01-lv_lfc01 | grep -i 'block size'```, shrink filesystem to half of the block size since both pv's are of same size ```sudo umount /opt && sudo resize2fs  /dev/mapper/vg_lfc01-lv_lfc01 523264s && sudo lvreduce -l 511 /dev/vg_lfc01/lv_lfc01 && sudo vgreduce /dev/vg_lfc01 /dev/sdc1 && sudo pvremove /dev/sdc1```
 
 ## Configuring swap partitions
 ## File attributes
