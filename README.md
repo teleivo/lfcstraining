@@ -62,7 +62,7 @@ Please refer to https://training.linuxfoundation.org/certification/lfcs for an u
 2. GUID, sticky bit
   * create a directory which is owned by user root and group sales of which user john and jane are members. only root and members of the sales group should have read,write,execute access to this directory. files created in this directory should be readable, writable by the members of the sales group no matter who created the file. files in this directory should only be deletable by its owner or root.
 3. file attributes
-  * create directory 'attributes' in home directory /home/john of user john
+  * create directory 'attributes' in home directory /home/vagrant of user vagrant
   * create an immutable file 'immutable'
   * create file 'appendonly' which can only be appended to
   * create file 'noatimeupdate' of which atime will not be updated
