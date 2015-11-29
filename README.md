@@ -85,11 +85,28 @@ Please refer to https://training.linuxfoundation.org/certification/lfcs for an u
 2. locate
   * create a new file and use locate to find it
 
-## Formatting filesystems
-## Mounting filesystems automatically at boot time
-## Mounting networked filesystems
 ## Partitioning storage devices
+1. fdisk
+  * list all available disks
+  * add a primary partition on /dev/sde using half the available cylinders
+  * add an extended partition on /dev/sde
+  * add a logical partition on /dev/sde using the remaining cylinders
+
+## Formatting filesystems
+1. mkfs
+  * make an ext3 on /dev/sde1
+  * make an ext4 on /dev/sde5
+
+## Mounting filesystems automatically at boot time
+1. mount
+* mount /dev/sde1 automatically at boot time at /mnt/diske1
+* mount /dev/sde5 automatically at boot time at /mnt/diske5
+
+## Mounting networked filesystems
+
+
 ## Troubleshooting filesystem issues
+1. tune2fs
 
 # Local system administration
 ## Creating backups
