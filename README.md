@@ -72,7 +72,7 @@ Please refer to https://training.linuxfoundation.org/certification/lfcs for an u
 ## Finding files on the filesystem
 1. find
   * traverse the filesystem just once, listing setuid files and directories into /home/vagrant/suid.txt and files bigger than 10MB into /home/vagrant/big.txt
-  * search for files in john's home directory which have been modified in the last twenty-four hours
+  * search for files in john's home directory which have been modified in the last twenty-four hours and print modification time followed by file path
   * search for files which have read and write permission for their owner, and group, but which other users can read but not write to
   * search for files which have read and write permission for their owner and group, and which other users can read, without regard to the presence of any extra permission bits
   * search for files which are writable by both their owner and their group
