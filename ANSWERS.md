@@ -96,7 +96,33 @@ This shows possible ways to achieve the tasks described in [README](README.md).
   * ```mkdir /mnt/diske5```, add line to /etc/fstab ```UUID=1418e78b-ab4c-422a-a1e0-d17ffe6e3e4a /mnt/diske5 ext4 defaults 0 1```
 
 ## Mounting networked filesystems
+1. create samba share on host lcf01
+  * ```mkdir /opt/share/sales && chmod g+w /opt/share/sales && sudo smbpasswd -a john```
+  * ```sudo vim /etc/samba/smb.conf```
+  add the following to the end of the file
 
+
+[sales]  
+path = /opt/sales/share  
+valid users = john  
+read only = no  
+
+  * ```sudo service smbd restart```
+  * test config ```testparm```
+
+2. mount samba share on host lfc02
+  * install necessary packages ```sudo apt-get install cifs-utils && sudo apt-get install sambaclient```
+  * test connection with ```smbclient -L //10.10.1.10/sales -U john```
+  * create mount point ```sudo mkdir /mnt/sales```
+  * create credentials file ```su - john```, ```touch /mnt/.smbcredentials && chmod 600 /mnt/.smbcredentials```, add lines
+
+username=john  
+password=john
+
+  * automatically mount at boot by adding line to /etc/fstab ```//10.10.1.10/sales /mnt/sales cifs credentials=/mnt/.smbcredentials,defaults 0 0```, test with ```sudo mount -a```
+
+3. mount nfs filesystem
+  * TODO
 
 ## Troubleshooting filesystem issues
 
