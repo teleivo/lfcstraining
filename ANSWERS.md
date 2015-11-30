@@ -129,6 +129,17 @@ password=john
 # Local system administration
 ## Creating backups
 ## Creating local user groups
+* ```sudo addgroup marketing```
+* ```sudo vim /etc/group```, ensure 'john' is at end of line ```marketing:x:1003:john```
+* ```sudo usermod -aG marketing jane```
+* ```sudo gpasswd marketing```
+* ```su - john```, ```newgrp marketing && id -gn```, change back to default group ```newgrp```
+* ```su - jane```, ```touch janesfile && chgrp marketing janesfile```
+* ```sudo gpasswd -d john marketing```
+* ```sudo groupmod -n business marketing```
+* ```sudo gpasswd -R business```, note members of group with a password will still be able to newgrp to the group
+* ```sudo find /home -group business -delete```, ```sudo groupdel business```
+
 ## Managing file permissions
 ## Managing fstab entries
 ## Managing local users accounts
