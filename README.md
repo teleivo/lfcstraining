@@ -128,6 +128,10 @@ Please refer to https://training.linuxfoundation.org/certification/lfcs for an u
 ## Managing file permissions
 ## Managing fstab entries
 ## Managing local users accounts
+* create user frank member of group marketing but do not enable his login
+* disable the password of user john
+* create user jessica with shell /bin/false and no home directory
+
 ## Managing the startup process and related services
 ## Managing user accounts
 ## Managing user account attributes
