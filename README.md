@@ -114,7 +114,17 @@ Please refer to https://training.linuxfoundation.org/certification/lfcs for an u
 
 # Local system administration
 ## Creating backups
+1. use dd to create an image of a partition
+
 ## Creating local user groups
+* create group marketing
+* add user john to group marketing by manipulating the file containing groups and their members
+* add user jane to group marketing using a commandline tool
+* add a password to group marketing
+* login with john and change his current gid to marketing
+* login as jane create a new file and change the files group to marketing
+* disable password for group marketing
+
 ## Managing file permissions
 ## Managing fstab entries
 ## Managing local users accounts
