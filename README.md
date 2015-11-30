@@ -123,7 +123,10 @@ Please refer to https://training.linuxfoundation.org/certification/lfcs for an u
 * add a password to group marketing
 * login with john and change his current gid to marketing
 * login as jane create a new file and change the files group to marketing
-* disable password for group marketing
+* remove john from group marketing via a commandline tool
+* rename the group marketing to business
+* disable password for group business
+* remove group business and all the files owned by it
 
 ## Managing file permissions
 ## Managing fstab entries
