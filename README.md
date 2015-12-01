@@ -132,6 +132,12 @@ Please refer to https://training.linuxfoundation.org/certification/lfcs for an u
 * covered by [File attributes](#file-attributes)
 
 ## Managing fstab entries
+* add entry for filesystem  as read-only
+* mount filesystem so that atime is not updated
+* mount filesystem so that no user is able to mount it
+* find out which fileystems are currently supported by your kernel
+* get the UUID's of your block devices via command line or a file on your system
+
 ## Managing local users accounts
 * create user frank member of group marketing but do not enable his login
 * disable the password of user john
