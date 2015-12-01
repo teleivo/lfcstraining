@@ -129,6 +129,8 @@ Please refer to https://training.linuxfoundation.org/certification/lfcs for an u
 * remove group business and all the files owned by it
 
 ## Managing file permissions
+* covered by [File attributes](#file-attributes)
+
 ## Managing fstab entries
 ## Managing local users accounts
 * create user frank member of group marketing but do not enable his login
