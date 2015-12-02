@@ -90,7 +90,7 @@ This shows possible ways to achieve the tasks described in [README](README.md).
   * ```sudo find / -perm -u+w,g+w -type f```
   * ```which passwd```
   * ```sudo find / -user john```
-  * ```sudo find / -not -path "/home/john" -user john```
+  * ```sudo find / -user "john" -type f -path "/home/john" -prune```
   * ```sudo find / -iname "log"```
   * ```sudo find / -type c```
   * ```su - john```, ```mkdir find & cd find && touch "file name"{01,02,03}.txt```, ```find -type f -print0 | xargs -0 rm```
