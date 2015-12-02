@@ -55,7 +55,12 @@ Please refer to https://training.linuxfoundation.org/certification/lfcs for an u
   * unmount and delete the lvm lv_lfc01_snapshot after the backup finished
 
 4. create an LVM specifying the exact physical extents which should be used
-5. create a striped/linear LVM
+
+5. create a striped LVM out of lv_lfc01
+  * remove lvm lv_lfc01
+  * add physical volume /dev/sdc1 to vg_lfc01
+  * create a striped LVM with stripes=2 stripe_size=xxx
+  * print details of LVMs to see that the logical volume lv_lfc01 is used in striped fashion
 
 ## Configuring swap partitions
 1. create swap partition on /dev/sdd and auto mount on boot
