@@ -18,7 +18,13 @@ This shows possible ways to achieve the tasks described in [README](README.md).
   * ```cut -d':' -f7 /etc/passwd | uniq -c | sort -n -r > shells```
 2. ubuntu releases
   * ```wget https://en.wikipedia.org/wiki/List_of_Ubuntu_releases -O ubuntu-releases-web```
-  * ```grep -o '<span>.*</span>' ubuntu-releases-web | sed -n 4,23p | cut -d'>' -f2 | cut -d'<' -f1 > ubuntu-releases```
+  * 
+
+   ```grep -o '<span>.*</span>' ubuntu-releases-web | sed -n 4,23p | cut -d'>' -f2 | cut -d'<' -f1 > ubuntu-releases```
+   
+     or
+   
+   ```grep -o '<span>.*</span>'  ubuntu-releases-web | grep -o '^<span>.*</span></span>' | sed 's/<span>//g' | sed 's,</span></span>,,g' > ubuntu-releases```
   * ```wc -l ubuntu-releases```
 
 # Filesystem and storage
