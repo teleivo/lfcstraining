@@ -57,7 +57,7 @@ Please refer to https://training.linuxfoundation.org/certification/lfcs for an u
 4. create an LVM specifying the exact physical extents which should be used
 
 5. create a striped LVM out of lv_lfc01
-  * remove lvm lv_lfc01
+  * remove lvm lv_lfc01 and lv_lfc02
   * add physical volume /dev/sdc1 to vg_lfc01
   * create a striped LVM with stripes=2 stripe_size=xxx
   * print details of LVMs to see that the logical volume lv_lfc01 is used in striped fashion
