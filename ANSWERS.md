@@ -48,6 +48,11 @@ This shows possible ways to achieve the tasks described in [README](README.md).
   * ```sudo pvcreate /dev/sdc1 && sudo vgextend vg_lfc01 /dev/sdc1 && sudo lvextend -l 100%VG /dev/vg_lfc01/lv_lfc01 && sudo resize2fs /dev/mapper/vg_lfc01-lv_lfc01```
 2. shrink lvm lv_lfc01
   * get current block size ```sudo tune2fs -l /dev/mapper/vg_lfc01-lv_lfc01 | grep -i 'block size'```, shrink filesystem to half of the block size since both pv's are of same size ```sudo umount /opt && sudo resize2fs  /dev/mapper/vg_lfc01-lv_lfc01 523264s && sudo lvreduce -l 511 /dev/vg_lfc01/lv_lfc01 && sudo vgreduce /dev/vg_lfc01 /dev/sdc1 && sudo pvremove /dev/sdc1```
+3. create a snapshot lvm lv_lfc01_snapshot of lv_lfc01
+  * ```wget https://en.wikipedia.org/wiki/List_of_Ubuntu_releases -O /opt/ubuntu-releases-web```
+  * ```sudo pvcreate /dev/sdc1 && sudo vgextend vg_lfc01 /dev/sdc1 && sudo lvcreate -L100M -s -n lv_lfc01_snapshot vg_lfc01/lv_lfc01```
+  * ```sudo mkdir /srv/backup/ && sudo mount /dev/vg_lfc01/lv_lfc01_snapshot /srv/backup/```
+  * ```sudo umount /srv/backup/ && sudo vgreduce vg_lfc01 /dev/sdc1 && sudo pvremove /dev/sdc1```
 
 ## Configuring swap partitions
 1. create swap partition on /dev/sdd and auto mount on boot
