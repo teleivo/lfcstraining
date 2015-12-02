@@ -53,6 +53,14 @@ This shows possible ways to achieve the tasks described in [README](README.md).
   * ```sudo pvcreate /dev/sdc1 && sudo vgextend vg_lfc01 /dev/sdc1 && sudo lvcreate -L100M -s -n lv_lfc01_snapshot vg_lfc01/lv_lfc01```
   * ```sudo mkdir /srv/backup/ && sudo mount /dev/vg_lfc01/lv_lfc01_snapshot /srv/backup/```
   * ```sudo umount /srv/backup/ && sudo vgreduce vg_lfc01 /dev/sdc1 && sudo pvremove /dev/sdc1```
+4. create an LVM specifying the exact physical extents which should be used
+  * ```sudo pvcreate /dev/sdc1 && sudo vgextend vg_lfc01 /dev/sdc1 && sudo lvcreate -n lv_lfc02 -l 511 vg_lfc01```
+
+5. create a striped LVM out of lv_lfc01
+  * ```sudo lvremove /dev/vg_lfc01/lv_lfc0[12]```
+  * ```sudo pvcreate /dev/sdc1 && sudo vgextend vg_lfc01```
+  * ```sudo lvcreate --extents 100%FREE --name lv_lfc01_stripe vg_lfc01 --stripes 2 --stripesize 8```
+  * ```sudo lvdisplay -vm```
 
 ## Configuring swap partitions
 1. create swap partition on /dev/sdd and auto mount on boot
