@@ -98,9 +98,9 @@ Please refer to https://training.linuxfoundation.org/certification/lfcs for an u
 ## Partitioning storage devices
 1. fdisk
   * list all available disks
-  * add a primary partition on /dev/sde using half the available cylinders
+  * add a primary partition on /dev/sde using half the available sectors
   * add an extended partition on /dev/sde
-  * add a logical partition on /dev/sde using the remaining cylinders
+  * add a logical partition on /dev/sde using the remaining sectors
 
 ## Formatting filesystems
 1. mkfs
