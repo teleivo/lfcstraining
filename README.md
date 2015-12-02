@@ -144,6 +144,9 @@ Please refer to https://training.linuxfoundation.org/certification/lfcs for an u
 * create user jessica with shell /bin/false and no home directory
 
 ## Managing the startup process and related services
+* get status of ssh
+* 
+
 ## Managing user accounts
 ## Managing user account attributes
 ## Managing user processes
