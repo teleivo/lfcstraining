@@ -93,7 +93,7 @@ This shows possible ways to achieve the tasks described in [README](README.md).
   * ```sudo find / -user "john" -type f -path "/home/john" -prune```
   * ```sudo find / -iname "log"```
   * ```sudo find / -type c```
-  * ```su - john```, ```mkdir find & cd find && touch "file name"{01,02,03}.txt```, ```find -type f -print0 | xargs -0 rm```
+  * ```su - john```, ```mkdir find & cd find && touch 'file name'{01,02,03}.txt```, ```find -type f  -name "file name??.txt" -print0 | xargs -0 rm```
 2. locate
   * ```touch file01 sudo updatedb && locate file01```
 
