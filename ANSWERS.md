@@ -64,7 +64,7 @@ This shows possible ways to achieve the tasks described in [README](README.md).
 
 ## Configuring swap partitions
 1. create swap partition on /dev/sdd and auto mount on boot
-  * create partition with swap id ```sudo fdisk /dev/sdd```, ```sudo mkswap /dev/sdd1```, add fstab entry (get uuid by ```blkid```) ```UUID=ca4a7ff4-ff8d-4384-a10d-cf23a8d9f228 swap swap defaults 0 0```, ```sudo swapon -a```
+  * create partition with swap id ```sudo fdisk /dev/sdd```, ```sudo mkswap /dev/sdd1```, add fstab entry (get uuid by ```blkid```) ```UUID=ca4a7ff4-ff8d-4384-a10d-cf23a8d9f228 none swap defaults 0 0```, ```sudo swapon -a```
 2. list used swap devices
   * ```swapon -s``` or ```cat /proc/swaps```
 
