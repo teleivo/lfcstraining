@@ -130,7 +130,7 @@ read only = no
   * test config ```testparm```
 
 2. mount samba share on host lfc02
-  * install necessary packages ```sudo apt-get install cifs-utils && sudo apt-get install sambaclient```
+  * install necessary packages ```sudo apt-get install cifs-utils && sudo apt-get install smbclient```
   * test connection with ```smbclient -L //10.10.1.10/sales -U john```
   * create mount point ```sudo mkdir /mnt/sales```
   * create credentials file ```su - john```, ```touch /mnt/.smbcredentials && chmod 600 /mnt/.smbcredentials```, add lines
