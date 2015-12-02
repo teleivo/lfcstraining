@@ -49,10 +49,9 @@ Please refer to https://training.linuxfoundation.org/certification/lfcs for an u
 2. shrink lvm lv_lfc01
   * remove pv /dev/sdc1 from vg_lfc01
 3. create a snapshot lvm lv_lfc01_snapshot of lv_lfc01
-  * create a snapshot lvm lv_lfc01_snapshot of lv_lfc01, make it the same size
-  * mount the snapshot
   * write some data to the lv_lfc01
-  * create a backup of lv_lfc01_snapshot while data is written to lv_lfc01
+  * create a snapshot lvm lv_lfc01_snapshot of lv_lfc01
+  * mount the snapshot
   * unmount and delete the lvm lv_lfc01_snapshot after the backup finished
 
 4. create an LVM specifying the exact physical extents which should be used
