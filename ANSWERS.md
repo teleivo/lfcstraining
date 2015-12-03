@@ -172,9 +172,20 @@ password=john
 * ```sudo blkid``` or ```ll /dev/disk/by-uuid```
 
 ## Managing local users accounts
-## Managing the startup process and related services
+* if frank already exists ```sudo userdel -r frank```, ```sudo useradd -m -d /home/frank frank```
+* ```sudo passwd -l john```, unlock ```sudo passwd -u john```
+* ```sudo usermod --expiredate 1 john``` sudo usermod --expiredate "" john
+* ```sudo passwd -S john```
+* ```sudo chage -l john```
+* ```sudo chage -E $(date --date="+100 days" +%Y-%m-%d) -M 30 -m 10 -W 10 -I 10 john```
+* ```sudo passwd -e jane```, or ```sudo chage -d 0 jane```
+* ```sudo useradd -m -d /home/francis -g 1005 francis```
+* ```sudo useradd -m -d /home/jessica jessica -s /bin/false```
+
 ## Managing user accounts
 ## Managing user account attributes
+
+## Managing the startup process and related services
 ## Managing user processes
 ## Restoring backed up data
 ## Setting file permissions and ownership
