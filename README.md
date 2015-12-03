@@ -202,6 +202,7 @@ Please refer to https://training.linuxfoundation.org/certification/lfcs for an u
   * uses function
   * uses while
   * uses for loop
+  * test if directory exists and if we have write permission, create a file
 
 # Software management
 ## Installing software packages
