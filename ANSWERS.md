@@ -202,8 +202,14 @@ setgid vagrant
 
 exec echo Test Job ran at `date` >> /var/log/testjob.log
 ```
+* modify puppet (system-v) runlevels
+  * ```sudo update-rc.d -f puppet remove```, ```sudo update-rc.d puppet start 21 2 3 4 . stop 21 0 1 6 .```
+  * ```sudo update-rc.d puppet start 21 2 3 4 5 . stop 21 0 1 6 .```
+  * ```sudo update-rc.d puppet defaults```
 
 ## Managing user processes
+
+
 ## Restoring backed up data
 ## Setting file permissions and ownership
 
