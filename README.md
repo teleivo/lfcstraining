@@ -195,7 +195,12 @@ Please refer to https://training.linuxfoundation.org/certification/lfcs for an u
 
 # Local security
 ## Accessing the root account
+* login as root
 ## Using sudo to manage access to the root account
+* use sudo to execute a command
+* enable john to use sudo
+* increase the time required to re-enter the password when using sudo
+* ensure environment variable http_proxy is kept when using sudo
 
 # Shell scripting
 ## Basic bash shell scripting
@@ -211,3 +216,7 @@ Please refer to https://training.linuxfoundation.org/certification/lfcs for an u
 
 # Software management
 ## Installing software packages
+* install postgresql
+* download package postgresql
+* extract package postgresql
+* add an apt repository for postgresql and pin down its version
