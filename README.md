@@ -152,8 +152,12 @@ Please refer to https://training.linuxfoundation.org/certification/lfcs for an u
 * get the UUID's of your block devices via command line or a file on your system
 
 ## Managing local users accounts
-* create user frank member of group marketing but do not enable his login
-* disable the password of user john
+* create user frank member of group marketing with default home dir, but do not enable his login
+* disable user john from login in (others users might still be able), and re-enable
+* disable login with user john entirely, and re-enable
+* create user francis but do not create the default group francis, instead primary group should be marketing
+* set expiration date of johns password to 1 day from now
+* set janes password as expired so she has to change it the next time she logs in
 * create user jessica with shell /bin/false and no home directory
 
 ## Managing the startup process and related services
