@@ -186,6 +186,23 @@ password=john
 ## Managing user account attributes
 
 ## Managing the startup process and related services
+* ```sudo service ssh```, or ```status ssh```
+* ```sudo service cron stop```, then ```sudo service cron start``` or ```sudo stop cron```, then ```sudo start cron```
+* ```echo manual | sudo tee /etc/init/cron.override```
+* ```sudo vim /etc/init/testjob.conf```
+add
+```
+description "A test job file"
+author "some body"
+
+start on runlevel [2345]
+
+setuid vagrant
+setgid vagrant
+
+exec echo Test Job ran at `date` >> /var/log/testjob.log
+```
+
 ## Managing user processes
 ## Restoring backed up data
 ## Setting file permissions and ownership
