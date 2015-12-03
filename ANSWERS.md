@@ -150,7 +150,7 @@ password=john
 ## Creating local user groups
 * ```sudo addgroup marketing```
 * ```sudo vim /etc/group```, ensure 'john' is at end of line ```marketing:x:1003:john```
-* ```sudo usermod -aG marketing jane```
+* ```sudo usermod -aG marketing jane``` or ```sudo gpasswd -a jane marketing```
 * ```sudo gpasswd marketing```
 * ```su - john```, ```newgrp marketing && id -gn```, change back to default group ```newgrp```
 * ```su - jane```, ```touch janesfile && chgrp marketing janesfile```
