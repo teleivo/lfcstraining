@@ -175,6 +175,10 @@ Please refer to https://training.linuxfoundation.org/certification/lfcs for an u
 * create an upstart configuration for service 'testjob'
   * service should start on runlevels 2345
   * write a message with current timestamp to /var/log/testjob.log as user and group vagrant
+* modify puppet (system-v) runlevels
+  * prevent puppet from starting on runlevel 5
+  * prevent puppet from starting entirely (do not remove the init script itself)
+  * ensure puppet runs as before
 
 ## Managing user processes
 * reduce the priority of a process
