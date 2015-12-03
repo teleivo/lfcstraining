@@ -144,9 +144,10 @@ Please refer to https://training.linuxfoundation.org/certification/lfcs for an u
 * covered by [File attributes](#file-attributes)
 
 ## Managing fstab entries
-* add entry for filesystem  as read-only
-* mount filesystem so that atime is not updated
-* mount filesystem so that no user is able to mount it
+* mount filesystem as read-only
+* mount filesystem with defaults but atime should not be updated
+* mount filesystem with defaults but users should be able to mount it
+* mount filesystem with defaults but it should not automatically be mounted at boot time
 * find out which fileystems are currently supported by your kernel
 * get the UUID's of your block devices via command line or a file on your system
 
