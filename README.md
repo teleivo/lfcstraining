@@ -155,17 +155,23 @@ Please refer to https://training.linuxfoundation.org/certification/lfcs for an u
 * create user frank member of group marketing with default home dir, but do not enable his login
 * disable user john from login in (others users might still be able), and re-enable
 * disable login with user john entirely, and re-enable
-* create user francis but do not create the default group francis, instead primary group should be marketing
-* set expiration date of johns password to 1 day from now
+* print password status info on user john
+* print password aging info on user john
+* set john's account expiration to 100days from today, he should be able to keep his password for up to 30days, he should have to keep his password for a minimum of 10 days, be warned 10 days before password expiration and his account should be de-activated 10 days after password expiration.
 * set janes password as expired so she has to change it the next time she logs in
+* create user francis but do not create the default group francis, instead primary group should be marketing
 * create user jessica with shell /bin/false and no home directory
+
+## Managing user accounts
+* covered by [Managing local users accounts](#managing-local-users-accounts)
+
+## Managing user account attributes
+* covered by [Managing local users accounts](#managing-local-users-accounts)
 
 ## Managing the startup process and related services
 * get status of ssh
 * 
 
-## Managing user accounts
-## Managing user account attributes
 ## Managing user processes
 ## Restoring backed up data
 ## Setting file permissions and ownership
