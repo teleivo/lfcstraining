@@ -151,7 +151,9 @@ password=john
 * ```sudo addgroup marketing```
 * ```sudo vim /etc/group```, ensure 'john' is at end of line ```marketing:x:1003:john```
 * ```sudo usermod -aG marketing jane``` or ```sudo gpasswd -a jane marketing```
-* ```sudo gpasswd marketing```
+* ```sudo gpasswd -A jane marketing```
+* ```sudo su - jane```, ```gpasswd marketing```
+* ```sudo adduser frank```, ```sudo su - jane```, ```gpasswd -a frank```
 * ```su - john```, ```newgrp marketing && id -gn```, change back to default group ```newgrp```
 * ```su - jane```, ```touch janesfile && chgrp marketing janesfile```
 * ```sudo gpasswd -d john marketing```
