@@ -130,7 +130,9 @@ Please refer to https://training.linuxfoundation.org/certification/lfcs for an u
 * create group marketing
 * add user john to group marketing by manipulating the file containing groups and their members
 * add user jane to group marketing using a commandline tool
-* add a password to group marketing
+* make jane an administrator of group marketing
+* add a password to group marketing as user jane
+* create user frank and add him to group marketing as user jane
 * login with john and change his current gid to marketing
 * login as jane create a new file and change the files group to marketing
 * remove john from group marketing via a commandline tool
