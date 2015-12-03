@@ -194,6 +194,14 @@ Please refer to https://training.linuxfoundation.org/certification/lfcs for an u
 
 # Shell scripting
 ## Basic bash shell scripting
+* write a script
+  * exporting environment variables 
+  * which exits if called by root with return value 10
+  * takes command line arguments
+  * uses if
+  * uses function
+  * uses while
+  * uses for loop
 
 # Software management
 ## Installing software packages
