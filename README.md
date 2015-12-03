@@ -175,6 +175,7 @@ Please refer to https://training.linuxfoundation.org/certification/lfcs for an u
 ## Managing user processes
 ## Restoring backed up data
 ## Setting file permissions and ownership
+* covered by [File attributes](#file-attributes)
 
 # Local security
 ## Accessing the root account
