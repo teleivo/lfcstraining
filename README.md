@@ -170,9 +170,20 @@ Please refer to https://training.linuxfoundation.org/certification/lfcs for an u
 
 ## Managing the startup process and related services
 * get status of ssh
-* 
+* stop and start cron
+* disable cron from starting at boot
+* create an upstart configuration for service 'testjob'
+  * service should start on runlevels 2345
+  * write a message with current timestamp to /var/log/testjob.log as user and group vagrant
 
 ## Managing user processes
+* reduce the priority of a process
+* increase the priority of a process
+* start a process from the shell with a specific nice value
+* start a process from the shell in background, bring it to the foreground, halt it, resume it, kill it
+* send a stop signal to a process
+* send a kill signal to a process
+
 ## Restoring backed up data
 ## Setting file permissions and ownership
 * covered by [File attributes](#file-attributes)
