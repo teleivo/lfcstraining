@@ -181,6 +181,7 @@ Please refer to https://training.linuxfoundation.org/certification/lfcs for an u
   * ensure puppet runs as before
 
 ## Managing user processes
+* find all processes of user vagrant
 * reduce the priority of a process
 * increase the priority of a process
 * start a process from the shell with a specific nice value
