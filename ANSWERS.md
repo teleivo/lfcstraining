@@ -163,6 +163,14 @@ password=john
 
 ## Managing file permissions
 ## Managing fstab entries
+```sudo mkdir /mnt/{readonly,noatime,users,noauto}```
+* /etc/fstab entry: ```UUID=ad31310a-1125-4f96-ac8b-b8f3fb6736e7 /mnt/readonly ext4 ro,suid,dev,exec,auto,nouser,async 0 2```
+* /etc/fstab entry: ```UUID=9bd0459c-a9fd-4b0b-84d2-6b83fac5009d /mnt/noatime ext4 defaults,noatime 0 2```
+* /etc/fstab entry: ```UUID=b00b3393-37c7-4d07-acb5-52203acc1398 /mnt/users ext4 rw,suid,dev,exec,auto,user,async 0 2```
+* /etc/fstab entry: ```UUID=7184b8e8-232a-40a1-998d-3b21e3ee182a /mnt/noauto ext4 rw,suid,dev,exec,noauto,nouser,async 0 2```
+* cat /proc/filesystems
+* ```sudo blkid``` or ```ll /dev/disk/by-uuid```
+
 ## Managing local users accounts
 ## Managing the startup process and related services
 ## Managing user accounts
