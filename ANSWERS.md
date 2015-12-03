@@ -208,7 +208,13 @@ exec echo Test Job ran at `date` >> /var/log/testjob.log
   * ```sudo update-rc.d puppet defaults```
 
 ## Managing user processes
-
+* ```sudo ps -u vagrant```
+* ```sudo top```, press L and enter 'cron', press r for renice, and enter value
+* ```sudo renice 0 -p 2877```
+* ```nice -n 10 sleep 1000```
+* ```nice -n 10 sleep 1000 &```, ```jobs```, ```fg 2```, CTRL-Z, , ```bg 2```, ```fg 2``` + CTRL+C
+* ```sleep 10000 &```, ```kill -l```, ```sudo kill -15 $PID_OF_PROCESS```
+* ```sleep 10000 &```, ```sudo kill -9 $PID_OF_PROCESS```
 
 ## Restoring backed up data
 ## Setting file permissions and ownership
