@@ -222,6 +222,27 @@ exec echo Test Job ran at `date` >> /var/log/testjob.log
 # Local security
 ## Accessing the root account
 ## Using sudo to manage access to the root account
+* ```sudo adduser john```
+* ```sudo usermod -a -G sudo john```
+* ```su - john```, ```sudo -u jane mkdir janesdirectory```
+* ```sudo adduser dbbackup```, ```sudo EDITOR=vim visudo```,
+add line
+
+```dbbackup ALL=(ALL:ALL) NOPASSWD:/usr/sbin/service ssh status```
+
+* ```sudo -l```
+* ```sudo -l -U dbbackup```
+* ```sudo EDITOR=vim visudo```, ```Defaults env_reset,timestamp_timeout=1```
+* ```sudo touch /etc/sudoers.d/proxy && sudo chmod 600 /etc/sudoers.d/proxy```,
+
+first add the lines via ```sudo EDITOR=vim visudo```
+this ensures syntax is correct
+
+```
+Defaults env_keep += "HTTP_PROXY HTTPS_PROXY FTP_PROXY NO_PROXY"
+Defaults env_keep += "http_proxy https_proxy ftp_proxy no_proxy"
+```
+later move them to /etc/sudoers.d/proxy
 
 # Shell scripting
 ## Basic bash shell scripting
