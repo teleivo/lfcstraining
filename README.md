@@ -206,21 +206,23 @@ Please refer to https://training.linuxfoundation.org/certification/lfcs for an u
 * ensure sudo only allows the use of sudo for 1 minute, after that the user should be asked for his password again
 * ensure environment variable http_proxy is kept when using sudo
 
-# Shell scripting
-## Basic bash shell scripting
-* write a script
-  * exporting environment variables 
-  * which exits if called by root with return value 10
-  * takes command line arguments
-  * uses if
-  * uses function
-  * uses while
-  * uses for loop
-  * test if directory exists and if we have write permission, create a file
-
 # Software management
 ## Installing software packages
 * install postgresql
 * download package postgresql
 * extract package postgresql
 * add an apt repository for postgresql and pin down its version
+
+# Shell scripting
+## Basic bash shell scripting
+* write a script
+  * which exits if called by root with return value 1
+  * first command line argument should take a string, an action, either 'create' or 'delete' (should accept all permutations of upper/lower case like for ex. 'crEate')
+  * second command line argument is a string, a directory name, which should be created or deleted
+  * test if directory already exists, if so exit with return value 2
+  * script creates files "file name01", "file name02", "file name03" in the created directory
+
+* ping script
+  * create a pinghosts file which contains hosts you want to ping, one host per line
+  * read that file, loop through the entries and ping these hosts 2 times
+ 
