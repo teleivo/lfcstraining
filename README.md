@@ -215,11 +215,11 @@ Please refer to https://training.linuxfoundation.org/certification/lfcs for an u
 
 # Shell scripting
 ## Basic bash shell scripting
-* write a script
+* file creation script
   * which exits if called by root with return value 1
   * first command line argument should take a string, an action, either 'create' or 'delete' (should accept all permutations of upper/lower case like for ex. 'crEate')
   * second command line argument is a string, a directory name, which should be created or deleted
-  * test if directory already exists, if so exit with return value 2
+  * test if directory already exists, if so and action=create exit with return value 2
   * script creates files "file name01", "file name02", "file name03" in the created directory
 
 * ping script
