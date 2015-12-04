@@ -262,3 +262,43 @@ Pin-Priority: 501
 
 # Shell scripting
 ## Basic bash shell scripting
+* file creation script
+```#!/bin/bash
+
+if [ $(id -u) -eq 0 ]; then
+        echo "You are root! Not allowed in here!"
+        exit 1
+fi
+
+ARG_ACTION="$1"
+
+case $ARG_ACTION in
+        [cC][rR][eE][aA][tT][eE])
+                ACTION="create"
+                echo $ACTION
+                ;;
+        [dD][eE][lL][eE][tT][eE])
+                ACTION="delete"
+                echo $ACTION
+                ;;
+        *)
+                echo "First argument allowed is 'create' or 'delete'"
+                exit 2
+                ;;
+esac
+
+DIRNAME="$2"
+
+if [ $ACTION = "create" ]; then
+        if [ -e "$DIRNAME" ]; then
+                echo "directory ${DIRNAME} cannot be created it exists already, you need to delete it first"
+        else
+                echo "work can be done"
+                mkdir "${DIRNAME}"
+                for i in 01 02 03 04 ; do
+                        touch "${DIRNAME}/file name${i}"
+                done
+        fi
+elif [ $ACTION = "delete" ]; then
+        rm -rf "${DIRNAME}"
+fi```
