@@ -201,7 +201,9 @@ Please refer to https://training.linuxfoundation.org/certification/lfcs for an u
 * enable john to use sudo
 * logged in as user john execute a command with sudo as another user
 * create user dbbackup and let the user use sudo only to execute command 'service ssh status' without having to type his password
-* increase the time required to re-enter the password when using sudo
+* as user vagrant list user vagrant's sudo permissions
+* as user vagrant list user dbbackups's sudo permissions
+* ensure sudo only allows the use of sudo for 1 minute, after that the user should be asked for his password again
 * ensure environment variable http_proxy is kept when using sudo
 
 # Shell scripting
