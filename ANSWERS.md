@@ -244,8 +244,21 @@ Defaults env_keep += "http_proxy https_proxy ftp_proxy no_proxy"
 ```
 later move them to /etc/sudoers.d/proxy
 
-# Shell scripting
-## Basic bash shell scripting
-
 # Software management
 ## Installing software packages
+* ```sudo apt-get install postgresql-9.3```
+* ```sudo apt-get download postgresql-9.3```
+* ```sudo dpkg -x postgresql-9.3_9.3.10-0ubuntu0.14.04_amd64.deb  .```
+* ```sudo apt-get purge postgresql-9.3```, ```echo "deb http://apt.postgresql.org/pub/repos/apt/ trusty-pgdg main" | sudo tee /etc/apt/sources.list.d/pgdg.list```, ```wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | \
+  sudo apt-key add -
+sudo apt-get update```
+
+check versions ```sudo apt-cache policy postgresql```, pick one and add file /etc/apt/preferences.d/pgdg.pref
+```
+Package: postgresql*
+Pin: version 9.3*
+Pin-Priority: 501
+```
+
+# Shell scripting
+## Basic bash shell scripting
