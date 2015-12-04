@@ -199,6 +199,8 @@ Please refer to https://training.linuxfoundation.org/certification/lfcs for an u
 ## Using sudo to manage access to the root account
 * use sudo to execute a command
 * enable john to use sudo
+* logged in as user john execute a command with sudo as another user
+* create user dbbackup and let the user use sudo only to execute command 'service ssh status' without having to type his password
 * increase the time required to re-enter the password when using sudo
 * ensure environment variable http_proxy is kept when using sudo
 
