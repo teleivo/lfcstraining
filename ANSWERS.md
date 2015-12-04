@@ -302,3 +302,10 @@ if [ $ACTION = "create" ]; then
 elif [ $ACTION = "delete" ]; then
         rm -rf "${DIRNAME}"
 fi```
+
+* ping script
+#!/bin/bash
+
+```while read HOSTS; do
+        ping -c 2 $HOSTS
+done < pinghosts```
